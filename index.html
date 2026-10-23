@@ -922,7 +922,7 @@ $('edqs').onclick=()=>closeEd(true);$('edqd').onclick=()=>closeEd(false);$('edqc
 $('edpad').querySelectorAll('button').forEach(b=>{let iv=0;const d=b.dataset.d.split(',').map(Number),go=()=>nudge(d[0]*3,d[1]*3),stop=()=>{clearInterval(iv);iv=0};
  b.addEventListener('pointerdown',e=>{e.preventDefault();go();stop();iv=setInterval(go,70)});for(const t of['pointerup','pointerleave','pointercancel'])b.addEventListener(t,stop)});
 edReady=1;applyLayout();
-applyGun();renderShop();syncDiff();enterLobby();loop();
+applyGun();renderShop();syncDiff();$('ov').style.display='flex';$('online-panel').style.display='flex';$('lh').style.display='none';$('rb').style.display='none';loop();
 </script>
 </body>
 </html>
