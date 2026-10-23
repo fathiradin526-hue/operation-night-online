@@ -1,3 +1,4 @@
+
 'use strict';
 const express = require('express');
 const http = require('http');
@@ -10,7 +11,7 @@ const app = express();
 const server = http.createServer(app);
 const io = new Server(server, { cors: { origin: false }, maxHttpBufferSize: 1e5 });
 const PORT = Number(process.env.PORT || 3000);
-const DATA_DIR = process.env.DATA_DIR || path.join(__dirname, 'data');
+const DATA_DIR = process.env.DATA_DIR || path.join(process.cwd(), 'data');
 const DB_FILE = path.join(DATA_DIR, 'db.json');
 const TOKEN_SECRET = process.env.TOKEN_SECRET;
 const ADMIN_USERNAME = process.env.ADMIN_USERNAME;
