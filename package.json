@@ -1,0 +1,10 @@
+{
+  "name": "operation-night-online",
+  "version": "2.0.0",
+  "private": true,
+  "description": "Operation Night browser FPS with server accounts, admin coin history and realtime rooms",
+  "main": "server.js",
+  "scripts": { "start": "node server.js" },
+  "engines": { "node": ">=18" },
+  "dependencies": { "express": "^4.21.2", "socket.io": "^4.8.1" }
+}
